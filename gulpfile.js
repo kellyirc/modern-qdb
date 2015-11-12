@@ -3,7 +3,6 @@ require('babel/register');
 
 var gulp = require('gulp');
 
-require('./gulp/binaries');
 require('./gulp/browser');
 require('./gulp/clean');
 require('./gulp/compile');
@@ -21,7 +20,7 @@ gulp.task('release:minor', ['bump:minor', 'upload:binaries', 'deploy']);
 gulp.task('release:major', ['bump:major', 'upload:binaries', 'deploy']);
 
 gulp.task('build:all', ['copy:dist', 'build:lib', 'compile:all']);
-gulp.task('compile:all', ['compile:js', 'compile:sass', 'compile:jade']);
+gulp.task('compile:all', ['compile:js', 'compile:sass']);
 gulp.task('check', ['build:all']);
 
 gulp.task('default', ['clean:all', 'build:all', 'connect', 'watch:all']);

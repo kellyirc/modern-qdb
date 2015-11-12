@@ -27,16 +27,17 @@
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0"
   },
-
   "gulp": {
+    "html": [
+      "src/index.html"
+    ],
     "sass": "src/scss/*.scss",
-    "libjs": [
-    ],
-    "libcss": [
-    ],
+    "libjs": [],
+    "libcss": [],
     "root": [
       "CNAME",
-      "favicon.ico"
+      "favicon.ico",
+      "src/index.html"
     ],
     "js": [
       "src/js/**/*.js"
@@ -49,12 +50,11 @@
       "release": "./bin-release",
       "cache": "./bin-cache"
     },
-    "entry": "./src/js/_init.js",
+    "entry": "./src/js/app.js",
     "dist": "./dist/"
   },
   "devDependencies": {
-    "babel-preset-react": "^6.1.4",
-    "babel": "^5.8.23",
+    "babel": "^5.8.29",
     "babel-eslint": "^4.1.0",
     "babelify": "^6.2.0",
     "bower": "~1.6.3",
